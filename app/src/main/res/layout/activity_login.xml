@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/data_sense_logo"
+        app:layout_constraintBottom_toTopOf="@id/tv_contact_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_contact_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/density_20"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_18"
+        app:layout_constraintBottom_toTopOf="@id/til_email_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/density_20"
+        android:layout_marginTop="@dimen/density_20"
+        android:gravity="center"
+        android:hint="@string/email"
+        app:boxStrokeColor="@color/red"
+        app:hintTextColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/til_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_contact_details"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/density_8"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="start|center_vertical"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/density_16"
+            android:singleLine="true"
+            android:textSize="@dimen/font_16"
+            android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/density_8"
+        android:gravity="center"
+        android:hint="@string/password"
+        app:boxStrokeColor="@color/red"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/til_email_address"
+        app:layout_constraintStart_toStartOf="@id/til_email_address"
+        app:layout_constraintTop_toBottomOf="@id/til_email_address">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/density_8"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="start|center_vertical"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:padding="@dimen/density_16"
+            android:singleLine="true"
+            android:textSize="@dimen/font_16"
+            android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/density_8"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:padding="@dimen/density_6"
+        android:text="Not Having Account... Register Here"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintBottom_toTopOf="@id/ll_btn_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_password"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/density_30"
+        android:background="@drawable/bg_orange_radius_corner"
+        android:elevation="@dimen/density_8"
+        android:gravity="center"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_password"
+        app:layout_constraintVertical_bias="0.92">
+
+        <TextView
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="@dimen/density_6"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_20" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

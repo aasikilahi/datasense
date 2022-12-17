@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">DataSense</string>
+    <string name="title_activity_spalsh">SpalshActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="registeration">Registeration</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="mob">Mobile No</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="scramble">Scramble</string>
+    <string name="timer_start">Timer Start</string>
+    <string name="score_board">Score Board</string>
+    <string name="status">Status</string>
+    <string name="score">Score</string>
+    <string name="data_sense">DataSense</string>
+    <string name="go_login">Go To Login</string>
+</resources>
